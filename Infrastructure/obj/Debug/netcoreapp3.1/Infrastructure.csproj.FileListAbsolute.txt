@@ -1,0 +1,12 @@
+D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+D:\Personal Projects\Seed Project\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+D:\Personal Projects\Seed Project\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+D:\Personal Projects\Seed Project\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+D:\Personal Projects\Seed Project\Infrastructure\bin\Debug\netcoreapp3.1\ApplicationCore.dll
+D:\Personal Projects\Seed Project\Infrastructure\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
+D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb

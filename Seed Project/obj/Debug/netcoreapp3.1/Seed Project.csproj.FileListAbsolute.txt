@@ -1,0 +1,41 @@
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.csprojAssemblyReference.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.csproj.CoreCompileInputs.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.MvcApplicationPartsAssemblyInfo.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.RazorAssemblyInfo.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.RazorAssemblyInfo.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.AssemblyInfoInputs.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.AssemblyInfo.cs
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.exe
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.deps.json
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.runtimeconfig.json
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.runtimeconfig.dev.json
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.dll
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.pdb
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.Views.dll
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Seed Project.Views.pdb
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\ApplicationCore.dll
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Infrastructure.dll
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
+D:\Personal Projects\Seed Project\Seed Project\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.TagHelpers.input.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.TagHelpers.output.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.RazorCoreGenerate.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.RazorTargetAssemblyInfo.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.RazorTargetAssemblyInfo.cs
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.Views.pdb
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.csproj.CopyComplete
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\staticwebassets\Seed Project.StaticWebAssets.Manifest.cache
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\staticwebassets\Seed Project.StaticWebAssets.xml
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.dll
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.pdb
+D:\Personal Projects\Seed Project\Seed Project\obj\Debug\netcoreapp3.1\Seed Project.genruntimeconfig.cache
