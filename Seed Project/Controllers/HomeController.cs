@@ -15,6 +15,7 @@ namespace Seed_Project.Controllers
 
     public HomeController(ILogger<HomeController> logger)
     {
+      //hello github
       _logger = logger;
     }
 

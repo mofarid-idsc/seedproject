@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj",
+      "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-      "outputPath": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\obj\\",
+      "outputPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

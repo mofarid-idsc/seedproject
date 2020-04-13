@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7k9n19GS3NFqYT+zZh8UgL+kkZGyuzqU8puMab8Qu7Nw9yI2LKbSR5ONktwVjaYNfsy7JjjAlJlkQrwvX5sMFQ==",
+  "dgSpecHash": "w8FpIKpZJ7EbtgdbvNov6pjFSy+mSCrhkTWw5AJH2LA0EQx2oAuoNyYemp2dOdReJpwxvFxLFoG+POFNu4jD2w==",
   "success": true,
-  "projectFilePath": "D:\\Personal Projects\\Seed Project\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

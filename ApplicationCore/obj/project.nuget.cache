@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dgps1iFrTWtY5ZmdipEDH2vM6S+88P3D5AfBxhL1wZCOdAWxAH6+PNJ5hqaFGmphWyz1eTvVB5L2aHEZAyEhAw==",
+  "dgSpecHash": "tHrdYMfmORA19WQbNlPz03UhgVxZ46t973RM5TFSUe0ZjnI1rlSqnyKnOyPS5tmk0J3+P0IHRNXfVgaBQnZYrg==",
   "success": true,
-  "projectFilePath": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

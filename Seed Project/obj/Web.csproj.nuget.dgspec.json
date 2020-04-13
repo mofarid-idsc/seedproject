@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal Projects\\Seed Project\\Seed Project\\Web.csproj": {}
+    "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\Web.csproj": {}
   },
   "projects": {
-    "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj": {
+    "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj",
+        "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\obj\\",
+        "outputPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -59,14 +59,14 @@
         }
       }
     },
-    "D:\\Personal Projects\\Seed Project\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal Projects\\Seed Project\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Personal Projects\\Seed Project\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal Projects\\Seed Project\\Infrastructure\\obj\\",
+        "outputPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj"
+              "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {
+                "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj"
               }
             }
           }
@@ -118,14 +118,14 @@
         }
       }
     },
-    "D:\\Personal Projects\\Seed Project\\Seed Project\\Web.csproj": {
+    "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal Projects\\Seed Project\\Seed Project\\Web.csproj",
+        "projectUniqueName": "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "D:\\Personal Projects\\Seed Project\\Seed Project\\Web.csproj",
+        "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\Web.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal Projects\\Seed Project\\Seed Project\\obj\\",
+        "outputPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -144,11 +144,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "D:\\Personal Projects\\Seed Project\\ApplicationCore\\ApplicationCore.csproj"
+              "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {
+                "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj"
               },
-              "D:\\Personal Projects\\Seed Project\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Personal Projects\\Seed Project\\Infrastructure\\Infrastructure.csproj"
+              "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
