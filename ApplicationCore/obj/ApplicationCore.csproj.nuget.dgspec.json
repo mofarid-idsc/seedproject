@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {}
+    "F:\\IDSC\\Seed\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {}
   },
   "projects": {
-    "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {
+    "F:\\IDSC\\Seed\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "F:\\IDSC\\Seed\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\obj\\",
+        "projectPath": "F:\\IDSC\\Seed\\seedproject\\ApplicationCore\\ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\alaaa\\.nuget\\packages\\",
+        "outputPath": "F:\\IDSC\\Seed\\seedproject\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alaaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -46,23 +46,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mohamed\\.nuget\\packages\\": {},
+    "C:\\Users\\alaaa\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\Web.csproj",
+      "projectUniqueName": "F:\\IDSC\\Seed\\seedproject\\Seed Project\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\Web.csproj",
-      "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-      "outputPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Seed Project\\obj\\",
+      "projectPath": "F:\\IDSC\\Seed\\seedproject\\Seed Project\\Web.csproj",
+      "packagesPath": "C:\\Users\\alaaa\\.nuget\\packages\\",
+      "outputPath": "F:\\IDSC\\Seed\\seedproject\\Seed Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alaaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -75,11 +75,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\ApplicationCore\\ApplicationCore.csproj"
+            "F:\\IDSC\\Seed\\seedproject\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "F:\\IDSC\\Seed\\seedproject\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\Personal Projects\\Seed Project\\seedproject\\Infrastructure\\Infrastructure.csproj"
+            "F:\\IDSC\\Seed\\seedproject\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "F:\\IDSC\\Seed\\seedproject\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
