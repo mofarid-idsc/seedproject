@@ -10,3 +10,18 @@ D:\Personal Projects\Seed Project\Infrastructure\bin\Debug\netcoreapp3.1\Applica
 D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
 D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
 D:\Personal Projects\Seed Project\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+K:\Core\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+K:\Core\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+K:\Core\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+K:\Core\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\ApplicationCore.dll
+K:\Core\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+K:\Core\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json
+K:\Core\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+K:\Core\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache
