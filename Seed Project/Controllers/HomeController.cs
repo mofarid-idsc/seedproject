@@ -21,6 +21,7 @@ namespace Seed_Project.Controllers
     public HomeController(ILogger<HomeController> logger, ResourceManager resourceManager)
     {
       //hello github
+      //Sara Trial
       _logger = logger;
       _resourceManager = resourceManager;
       //_localizer = localizer;

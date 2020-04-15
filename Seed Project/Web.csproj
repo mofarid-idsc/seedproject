@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Pages\" />
     <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
@@ -29,6 +28,17 @@
     <EmbeddedResource Update="Resources\Welcome.es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
   </ItemGroup>
 
 </Project>
