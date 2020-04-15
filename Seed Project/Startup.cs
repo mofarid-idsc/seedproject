@@ -27,7 +27,6 @@ namespace Seed_Project
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddSingleton(new ResourceManager("Seed_Project.Resources.Welcome", typeof(Startup).Assembly));
-
       services.AddControllersWithViews();
       services.AddMvc();
     }
