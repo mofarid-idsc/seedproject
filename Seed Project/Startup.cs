@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Resources;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,7 +26,9 @@ namespace Seed_Project
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddSingleton(new ResourceManager("Seed_Project.Resources.Welcome", typeof(Startup).Assembly));
       services.AddControllersWithViews();
+      services.AddMvc();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +45,23 @@ namespace Seed_Project
         app.UseHsts();
       }
       app.UseHttpsRedirection();
+
+      //var supportedCultures = new[]
+      //{
+      //  new CultureInfo("en"),
+      //  new CultureInfo("es"),
+      //};
+
+      //app.UseRequestLocalization(new RequestLocalizationOptions
+      //{
+      //  DefaultRequestCulture = new RequestCulture("en"),
+      //  // Formatting numbers, dates, etc.
+      //  SupportedCultures = supportedCultures,
+      //  // UI strings that we have localized.
+      //  SupportedUICultures = supportedCultures,
+        
+      //});
+
       app.UseStaticFiles();
 
       app.UseRouting();
@@ -52,6 +74,7 @@ namespace Seed_Project
                   name: "default",
                   pattern: "{controller=Home}/{action=Index}/{id?}");
       });
+      
     }
   }
 }
