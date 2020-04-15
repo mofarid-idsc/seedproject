@@ -7,11 +7,3 @@ D:\Personal Projects\Seed Project\ApplicationCore\obj\Debug\netcoreapp3.1\Applic
 D:\Personal Projects\Seed Project\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfo.cs
 D:\Personal Projects\Seed Project\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
 D:\Personal Projects\Seed Project\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
-K:\Core\seedproject\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.deps.json
-K:\Core\seedproject\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.dll
-K:\Core\seedproject\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
-K:\Core\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfoInputs.cache
-K:\Core\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfo.cs
-K:\Core\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
-K:\Core\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
-K:\Core\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csproj.CoreCompileInputs.cache
