@@ -29,19 +29,18 @@ namespace Seed_Project
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddDbContext<AppIdentityDbContext>(options =>
-     options.UseSqlServer(
-         Configuration.GetConnectionString("IdentityContextConnection")));
+          options.UseSqlServer(
+            Configuration.GetConnectionString("IdentityContextConnection")));
 
       services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
         .AddRoles<IdentityRole>()
         .AddEntityFrameworkStores<AppIdentityDbContext>();
 
+      services.AddSingleton(new ResourceManager("Seed_Project.Resources.Welcome", typeof(Startup).Assembly));
       services.AddControllersWithViews();
       //services.AddControllers();
       //services.AddDbContext<AppIdentityDbContext>
       services.AddRazorPages();
-
-
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
