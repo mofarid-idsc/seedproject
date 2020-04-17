@@ -39,8 +39,8 @@ namespace Seed_Project
       services.AddControllersWithViews();
       //services.AddControllers();
       //services.AddDbContext<AppIdentityDbContext>
-      services.AddRazorPages();
-
+      services.AddRazorPages(); 
+      services.AddSingleton(new ResourceManager("Seed_Project.Resources.Welcome", typeof(Startup).Assembly));
 
     }
 
