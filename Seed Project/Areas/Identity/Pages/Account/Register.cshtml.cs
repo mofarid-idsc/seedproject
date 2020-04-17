@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
@@ -24,13 +25,16 @@ namespace Seed_Project.Areas.Identity.Pages.Account
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly ILogger<RegisterModel> _logger;
     private readonly IEmailSender _emailSender;
-
+    private readonly RoleManager<IdentityRole> _roleManager;
     public RegisterModel(
         UserManager<ApplicationUser> userManager,
         SignInManager<ApplicationUser> signInManager,
         ILogger<RegisterModel> logger,
-        IEmailSender emailSender)
+        IEmailSender emailSender,
+        RoleManager<IdentityRole> roleManager
+      )
     {
+      _roleManager = roleManager;
       _userManager = userManager;
       _signInManager = signInManager;
       _logger = logger;
@@ -38,11 +42,11 @@ namespace Seed_Project.Areas.Identity.Pages.Account
     }
 
     [BindProperty]
-    public InputModel Input { get; set; }
+  public InputModel Input { get; set; }
 
     public string ReturnUrl { get; set; }
 
-    public IList<AuthenticationScheme> ExternalLogins { get; set; }
+  public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
     public class InputModel
     {
@@ -73,13 +77,44 @@ namespace Seed_Project.Areas.Identity.Pages.Account
       [Display(Name = "Confirm password")]
       [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
       public string ConfirmPassword { get; set; }
+      public string Role { get; set; }
     }
 
-    public async Task OnGetAsync(string returnUrl = null)
-    {
+    public List<SelectListItem> Roles { get; set; }
+    //public async Task OnGetAsync(string returnUrl = null)
+    //{
+    //  ReturnUrl = returnUrl;
+    //  ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+    //}
+
+
+    public void OnGet(string returnUrl = null)
+     {
+
+      //  ReturnUrl = returnUrl;
+      //  ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+      ViewData["Numbers"] = Enumerable.Range(1, 5)
+      .Select(n => new SelectListItem
+      {
+        Value = n.ToString(),
+        Text = n.ToString()
+      }).ToList();
+      Roles = _roleManager.Roles.Select(a =>
+                                 new SelectListItem
+                                 {
+                                   Value = a.Id.ToString(),
+                                   Text = a.Name
+                                 }).ToList();
       ReturnUrl = returnUrl;
-      ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+      
     }
+    public List<SelectListItem> Numbers => Enumerable.Range(1, 5)
+    .Select(n => new SelectListItem
+    {
+      Value = n.ToString(),
+      Text = n.ToString()
+    }).ToList();
+
 
     public async Task<IActionResult> OnPostAsync(string returnUrl = null)
     {
@@ -92,34 +127,39 @@ namespace Seed_Project.Areas.Identity.Pages.Account
           Name = Input.Name,
           DOB = Input.DOB,
           UserName = Input.Username,
-          Email = Input.Email
+          Email = Input.Email,
         };
 
         var result = await _userManager.CreateAsync(user, Input.Password);
+        var role = _roleManager.FindByIdAsync(Input.Role).Result;
         if (result.Succeeded)
         {
           _logger.LogInformation("User created a new account with password.");
 
-          var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-          code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-          var callbackUrl = Url.Page(
-              "/Account/ConfirmEmail",
-              pageHandler: null,
-              values: new { area = "Identity", userId = user.Id, code = code },
-              protocol: Request.Scheme);
+          await _userManager.AddToRoleAsync(user, role.Name);
 
-          await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-              $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+          //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+          //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+          //var callbackUrl = Url.Page(
+          //    "/Account/ConfirmEmail",
+          //    pageHandler: null,
+          //    values: new { area = "Identity", userId = user.Id, code = code },
+          //    protocol: Request.Scheme);
 
-          if (_userManager.Options.SignIn.RequireConfirmedAccount)
-          {
-            return RedirectToPage("RegisterConfirmation", new { email = Input.Email });
-          }
-          else
-          {
-            await _signInManager.SignInAsync(user, isPersistent: false);
+          //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+          //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+          //if (_userManager.Options.SignIn.RequireConfirmedAccount)
+          //{
+          //  return RedirectToPage("RegisterConfirmation", new { email = Input.Email });
+          //}
+          //else
+          //{
+          //  await _signInManager.SignInAsync(user, isPersistent: false);
+          //  return LocalRedirect(returnUrl);
+          //}
+           await _signInManager.SignInAsync(user, isPersistent: false);
             return LocalRedirect(returnUrl);
-          }
         }
         foreach (var error in result.Errors)
         {
