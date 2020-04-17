@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace Seed_Project
 {
@@ -13,14 +14,28 @@ namespace Seed_Project
   {
     public static void Main(string[] args)
     {
+      CreateMSSqlLoggerUsingJSONFile();
       CreateHostBuilder(args).Build().Run();
     }
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-              webBuilder.UseStartup<Startup>();
-            });
+    public static IHostBuilder CreateHostBuilder(string[] args)
+    {
+      return Host.CreateDefaultBuilder(args)
+          .UseSerilog()
+          .ConfigureWebHostDefaults(webBuilder =>
+          {
+            webBuilder.UseStartup<Startup>();
+          });
+    }
+    private static void CreateMSSqlLoggerUsingJSONFile()
+    {
+      var configuration = new ConfigurationBuilder()
+      .AddJsonFile("appsettings.json")
+      .Build();
+
+      Log.Logger = new LoggerConfiguration()
+          .ReadFrom.Configuration(configuration)
+          .CreateLogger();
+    }
   }
 }

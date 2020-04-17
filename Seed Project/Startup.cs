@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace Seed_Project
 {
@@ -28,6 +29,8 @@ namespace Seed_Project
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddSingleton(new ResourceManager("Seed_Project.Resources.Welcome", typeof(Startup).Assembly));
+
       services.AddDbContext<AppIdentityDbContext>(options =>
      options.UseSqlServer(
          Configuration.GetConnectionString("IdentityContextConnection")));
@@ -59,7 +62,7 @@ namespace Seed_Project
       }
       app.UseHttpsRedirection();
       app.UseStaticFiles();
-
+      app.UseSerilogRequestLogging();
       app.UseRouting();
       app.UseAuthentication(); 
       app.UseAuthorization();

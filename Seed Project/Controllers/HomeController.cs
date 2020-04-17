@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Seed_Project.Models;
+using Serilog;
 
 namespace Seed_Project.Controllers
 {
@@ -29,10 +30,15 @@ namespace Seed_Project.Controllers
 
     public IActionResult Index()
     {
-      _logger.LogInformation("helloinfo");
-      _logger.LogWarning("hellowarning");
-      _logger.LogError("helloerror");
-      _logger.LogCritical("hellocritical");
+      //_logger.LogInformation("helloinfo");
+      //_logger.LogWarning("hellowarning");
+      //_logger.LogError("helloerror");
+      //_logger.LogCritical("hellocritical");
+
+      Log.Logger.Warning("Warning");
+      Log.Logger.Information("Information");
+      Log.Logger.Error("Error");
+      Log.Logger.Fatal("Fatal");
       ViewBag.value = _resourceManager.GetString("Hello", new System.Globalization.CultureInfo("es"));
       return View();
     }
