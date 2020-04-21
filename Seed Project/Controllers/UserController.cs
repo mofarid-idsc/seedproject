@@ -50,8 +50,8 @@ namespace Seed_Project.Controllers
     // GET: User/Create
     public IActionResult Create()
     {
-      //ViewBag.Roles = new SelectList(_context.Roles, "Id", "Name");
-      ViewBag.Roles = _context.Roles.ToListAsync();
+      ViewBag.Roles = new SelectList(_context.Roles, "Id", "Name");
+      //ViewBag.Roles = _context.Roles.ToListAsync();
       return View();
     }
 
@@ -61,7 +61,7 @@ namespace Seed_Project.Controllers
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Name,DOB,CreateDate,ModifyDate,JobTitle,HomePage,UserOfficeID,Photo,Id,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount")] ApplicationUser applicationUser
-                , string[] Roles)
+                )
     {
       if (ModelState.IsValid)
       {
@@ -74,7 +74,8 @@ namespace Seed_Project.Controllers
           UserName = applicationUser.UserName,
           Email = applicationUser.Email,
           PhoneNumber = applicationUser.PhoneNumber,
-          Photo = applicationUser.Photo
+          Photo = applicationUser.Photo,
+          EmailConfirmed = true
         };
 
         var result = await _userManager.CreateAsync(user, applicationUser.PasswordHash);
@@ -85,12 +86,12 @@ namespace Seed_Project.Controllers
           Log.Logger.Information("A New {ObjectName} Was Added With ID: {ID}, Name: {Name}, Username: {UserName}, Email: {Email}, PhoneNumber: {PhoneNumber}, DateOfBirth: {DateOfBirth}"
                 , "User", user.Id, user.Name, user.UserName, user.Email, user.PhoneNumber, user.DOB);
 
-          List<ApplicationUserRole> userRoles = new List<ApplicationUserRole>();
+          //List<ApplicationUserRole> userRoles = new List<ApplicationUserRole>();
 
-          foreach (string r in Roles)
-          {
-            userRoles.Add(new ApplicationUserRole { UserId = applicationUser.Id, RoleId = r });
-          }
+          //foreach (string r in Roles)
+          //{
+          //  userRoles.Add(new ApplicationUserRole { UserId = applicationUser.Id, RoleId = r });
+          //}
 //          _context.Update(user);
  //         await _context.SaveChangesAsync();
 
