@@ -24,26 +24,26 @@
       </div>
       <div class="form-group">
         <label asp-for="Input.DOB"></label>
-        <input asp-for="Input.DOB" class="form-control" />
+        <input asp-for="Input.DOB" type="date" class="form-control" />
         <span asp-validation-for="Input.DOB" class="text-danger"></span>
       </div>
       <div class="form-group">
         <label asp-for="Input.Email"></label>
-        <input asp-for="Input.Email" class="form-control" />
+        <input asp-for="Input.Email" type="email" class="form-control" />
         <span asp-validation-for="Input.Email" class="text-danger"></span>
       </div>
       <div class="form-group">
         <label asp-for="Input.Password"></label>
-        <input asp-for="Input.Password" class="form-control" />
+        <input asp-for="Input.Password" type="password" class="form-control" />
         <span asp-validation-for="Input.Password" class="text-danger"></span>
       </div>
       <div class="form-group">
         <label asp-for="Input.ConfirmPassword"></label>
-        <input asp-for="Input.ConfirmPassword" class="form-control" />
+        <input asp-for="Input.ConfirmPassword" type="password" class="form-control" />
         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
       </div>
 
-      <div class="form-group">
+      @*<div class="form-group">
         <label asp-for="Input.Role"></label>
        
           <select asp-for="Person" asp-items="@(new SelectList(Model.Roles, "Id", "Name"))">
@@ -53,7 +53,7 @@
             <option value="">Pick one</option>
           </select>
         <span asp-validation-for="Input.Role" class="text-danger"></span>
-      </div>
+      </div>*@
 
       <button type="submit" class="btn btn-primary">Register</button>
     </form>

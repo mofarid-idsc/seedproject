@@ -13,14 +13,14 @@ namespace Seed_Project.Areas.Identity
   {
     public void Configure(IWebHostBuilder builder)
     {
-      builder.ConfigureServices((context, services) => {
+      //builder.ConfigureServices((context, services) => {
       //    services.AddDbContext<AppIdentityDbContext>(options =>
       //        options.UseSqlServer(
       //            context.Configuration.GetConnectionString("IdentityContextConnection")));
 
       //    services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
       //        .AddEntityFrameworkStores<AppIdentityDbContext>();
-      });
+      //});
     }
   }
 }
