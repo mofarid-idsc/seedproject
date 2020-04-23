@@ -15,3 +15,12 @@ D:\Personal Projects\Seed Project\seedproject\ApplicationCore\obj\Debug\netcorea
 D:\Personal Projects\Seed Project\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfo.cs
 D:\Personal Projects\Seed Project\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
 D:\Personal Projects\Seed Project\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.deps.json
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.dll
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csprojAssemblyReference.cache
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.csproj.CoreCompileInputs.cache
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfoInputs.cache
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.AssemblyInfo.cs
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.dll
+F:\IDSC\21-4-2020\seedproject\ApplicationCore\obj\Debug\netcoreapp3.1\ApplicationCore.pdb
