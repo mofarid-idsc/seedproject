@@ -16,9 +16,11 @@ namespace Seed_Project.Areas.Identity.Pages.Account
   {
     private readonly SignInManager<ApplicationUser> _signInManager;
     private readonly ILogger<LogoutModel> _logger;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public LogoutModel(SignInManager<ApplicationUser> signInManager, ILogger<LogoutModel> logger)
+    public LogoutModel(SignInManager<ApplicationUser> signInManager,UserManager<ApplicationUser> userManager, ILogger<LogoutModel> logger)
     {
+      _userManager = userManager;
       _signInManager = signInManager;
       _logger = logger;
     }
@@ -29,6 +31,12 @@ namespace Seed_Project.Areas.Identity.Pages.Account
 
     public async Task<IActionResult> OnPost(string returnUrl = null)
     {
+
+      // Delete Permissions From User
+      var user = await _userManager.GetUserAsync(HttpContext.User);
+      var userCalims = await _userManager.GetClaimsAsync(user);
+      await _userManager.RemoveClaimsAsync(user, userCalims);
+
       await _signInManager.SignOutAsync();
       _logger.LogInformation("User logged out.");
       if (returnUrl != null)

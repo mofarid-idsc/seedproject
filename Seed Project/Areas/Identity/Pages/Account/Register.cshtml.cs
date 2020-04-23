@@ -40,7 +40,7 @@ namespace Seed_Project.Areas.Identity.Pages.Account
       _logger = logger;
       _emailSender = emailSender;
     }
-
+   
     [BindProperty]
     public InputModel Input { get; set; }
 
@@ -128,6 +128,7 @@ namespace Seed_Project.Areas.Identity.Pages.Account
           DOB = Input.DOB,
           UserName = Input.Username,
           Email = Input.Email,
+          EmailConfirmed =true
         };
 
         var result = await _userManager.CreateAsync(user, Input.Password);

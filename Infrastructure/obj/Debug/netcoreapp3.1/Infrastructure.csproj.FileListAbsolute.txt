@@ -22,3 +22,18 @@ D:\Personal Projects\Seed Project\seedproject\Infrastructure\obj\Debug\netcoreap
 D:\Personal Projects\Seed Project\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
 D:\Personal Projects\Seed Project\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
 D:\Personal Projects\Seed Project\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+F:\IDSC\21-4-2020\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+F:\IDSC\21-4-2020\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json
+F:\IDSC\21-4-2020\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json
+F:\IDSC\21-4-2020\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+F:\IDSC\21-4-2020\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+F:\IDSC\21-4-2020\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\ApplicationCore.dll
+F:\IDSC\21-4-2020\seedproject\Infrastructure\bin\Debug\netcoreapp3.1\ApplicationCore.pdb
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+F:\IDSC\21-4-2020\seedproject\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache

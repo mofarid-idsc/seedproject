@@ -12,20 +12,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using ApplicationCore.Entities;
-
+using ApplicationCore.Helpers;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 namespace Seed_Project.Areas.Identity.Pages.Account
 {
   [AllowAnonymous]
   public class LoginModel : PageModel
   {
     private readonly UserManager<ApplicationUser> _userManager;
+    private readonly RoleManager<ApplicationRole> _roleManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
     private readonly ILogger<LoginModel> _logger;
 
+
     public LoginModel(SignInManager<ApplicationUser> signInManager,
         ILogger<LoginModel> logger,
-        UserManager<ApplicationUser> userManager)
+        UserManager<ApplicationUser> userManager,
+    RoleManager<ApplicationRole> roleManager)
     {
+      _roleManager = roleManager;
       _userManager = userManager;
       _signInManager = signInManager;
       _logger = logger;
@@ -71,6 +77,11 @@ namespace Seed_Project.Areas.Identity.Pages.Account
       ReturnUrl = returnUrl;
     }
 
+    private async Task<ApplicationUser> GetCurrentUser()
+    {
+      var user = _userManager.GetUserAsync(HttpContext.User);
+      return await user;
+    }
     public async Task<IActionResult> OnPostAsync(string returnUrl = null)
     {
       returnUrl = returnUrl ?? Url.Content("~/");
@@ -83,6 +94,20 @@ namespace Seed_Project.Areas.Identity.Pages.Account
         if (result.Succeeded)
         {
           _logger.LogInformation("User logged in.");
+          //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Dashboards.View));
+          //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Create));
+          // Get User 
+          ApplicationUser user = _userManager.Users.FirstOrDefault(x => x.UserName == Input.Username);
+          //Get Permissions from database and insert Into Claims
+          var claims = new Claim[]
+          {
+        new Claim(CustomClaimTypes.Permission, Permissions.Dashboards.View),
+        new Claim(CustomClaimTypes.Permission, Permissions.Users.Create)
+          }; 
+          if (user != null)
+            await _userManager.AddClaimsAsync(user, claims);
+         
+
           return LocalRedirect(returnUrl);
         }
         if (result.RequiresTwoFactor)
