@@ -8,10 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using ApplicationCore.Entities;
 using Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Serilog;
 
 namespace Seed_Project.Controllers
 {
+  
   public class UserController : Controller
   {
     private readonly AppIdentityDbContext _context;
@@ -61,7 +63,7 @@ namespace Seed_Project.Controllers
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Name,DOB,CreateDate,ModifyDate,JobTitle,HomePage,UserOfficeID,Photo,Id,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount")] ApplicationUser applicationUser
-                )
+                 , string[] Roles)
     {
       if (ModelState.IsValid)
       {
@@ -86,15 +88,16 @@ namespace Seed_Project.Controllers
           Log.Logger.Information("A New {ObjectName} Was Added With ID: {ID}, Name: {Name}, Username: {UserName}, Email: {Email}, PhoneNumber: {PhoneNumber}, DateOfBirth: {DateOfBirth}"
                 , "User", user.Id, user.Name, user.UserName, user.Email, user.PhoneNumber, user.DOB);
 
-          //List<ApplicationUserRole> userRoles = new List<ApplicationUserRole>();
+          List<ApplicationUserRole> userRoles = new List<ApplicationUserRole>();
 
-          //foreach (string r in Roles)
-          //{
-          //  userRoles.Add(new ApplicationUserRole { UserId = applicationUser.Id, RoleId = r });
-          //}
-//          _context.Update(user);
- //         await _context.SaveChangesAsync();
+          foreach (string r in Roles)
+          {
+            userRoles.Add(new ApplicationUserRole { UserId = applicationUser.Id, RoleId = r });
+          }
 
+          user.UserRoles = userRoles;
+          _context.Update(user);
+          await _context.SaveChangesAsync();
         }
 
         return RedirectToAction(nameof(Index));
@@ -116,8 +119,14 @@ namespace Seed_Project.Controllers
         return NotFound();
       }
       //ViewBag.Roles = _context.Roles.ToListAsync();
-      ViewBag.Roles = new SelectList(_context.Roles, "Id", "Name");
+      SelectList AllRoles = new SelectList(_context.Roles, "Id", "Name");
+      List<string> SelectedRolesIDs = _context.UserRoles.Where(ur => ur.UserId == id).Select(ur => ur.RoleId).ToList();
+      //applicationUser.UserRoles?.Where(ur => ur.UserId == id).Select(ur => ur.RoleId).ToList();
+      if (SelectedRolesIDs != null)
+        foreach (var role in AllRoles)
+          role.Selected = SelectedRolesIDs.Contains(role.Value);
 
+      ViewBag.Roles = AllRoles;
       return View(applicationUser);
     }
 
@@ -137,18 +146,24 @@ namespace Seed_Project.Controllers
       if (ModelState.IsValid)
       {
         try
-        { 
-          List<ApplicationUserRole> userRoles = new List<ApplicationUserRole>(); 
+        {
+          //await _userManager.UpdateAsync(applicationUser);
+
+          List<ApplicationUserRole> userRoles = new List<ApplicationUserRole>();
 
           foreach (string r in Roles)
           {
             userRoles.Add(new ApplicationUserRole { UserId = applicationUser.Id, RoleId = r });
           }
+
           //applicationUser.UserRoles = userRoles;
-          
+
+          //await _userManager.UpdateAsync(applicationUser);
+          //_context.Entry(_context.Users.Find(applicationUser.Id)).State = EntityState.Detached;
+          //_context.Attach(applicationUser);
           _context.Update(applicationUser);
           await _context.SaveChangesAsync();
-          
+
           Log.Logger.Information("A {ObjectName} Was Edited With ID: {ID}, Name: {Name}, Username: {UserName}, Email: {Email}, PhoneNumber: {PhoneNumber}, DateOfBirth: {DateOfBirth}"
               , "User", applicationUser.Id, applicationUser.Name, applicationUser.UserName, applicationUser.Email, applicationUser.PhoneNumber, applicationUser.DOB);
 
@@ -203,6 +218,28 @@ namespace Seed_Project.Controllers
     private bool ApplicationUserExists(string id)
     {
       return _context.Users.Any(e => e.Id == id);
+    }
+
+    // GET: User/AssignRoles/5
+    public async Task<IActionResult> AssignRoles(string id)
+    {
+      if (id == null)
+      {
+        return NotFound();
+      }
+
+      var applicationUser = await _context.Users.FindAsync(id);
+      if (applicationUser == null)
+      {
+        return NotFound();
+      }
+
+      List<string> selectedRolesIDs = _context.UserRoles.Where(ur => ur.UserId == id).Select(ur => ur.RoleId).ToList();
+
+      ViewBag.SelectedRoles = new SelectList(_context.Roles.Where(r => selectedRolesIDs.Contains(r.Id)).ToList(), "Id", "Name");
+      ViewBag.Roles = new SelectList(_context.Roles.Where(r => !selectedRolesIDs.Contains(r.Id)).ToList(), "Id", "Name");
+
+      return View(applicationUser);
     }
   }
 }

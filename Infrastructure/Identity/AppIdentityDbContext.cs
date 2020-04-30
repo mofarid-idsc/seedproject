@@ -26,7 +26,10 @@ namespace Infrastructure.Identity
       builder.Entity<ApplicationUser>(b =>
       {
         b.Property(e=>e.Id).ValueGeneratedOnAdd();
-        
+        b.HasIndex(e => e.UserName).IsUnique();
+        b.HasIndex(e => e.Email).IsUnique();
+        b.HasIndex(e => e.PhoneNumber).IsUnique();
+
         // Each User can have many UserClaims
         b.HasMany(e => e.Claims)
           .WithOne()

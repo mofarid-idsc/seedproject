@@ -1,0 +1,57 @@
+﻿@model ApplicationCore.Entities.ApplicationUser
+@{
+  ViewData["Title"] = "AssignRoles";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AssignRoles</h1>
+
+<h4>User: @Model.UserName</h4>
+<hr />
+<div class="row">
+  <div class="col-md-4">
+    <form class="form-inline" asp-action="Edit">
+      <div class="form-group mb2">
+        <label asp-for="UserRoles" class="control-label"></label>
+        @Html.DropDownList("Roles", null, null, new { @class = "form-control", @multiple = "multiple" })
+      </div>
+      <div class="form-group mb-2">
+        <input type="button" value=">>" class="btn btn-info" onclick="OnAddSelected()" />
+        <input type="button" value="<<" class="btn btn-info" onclick="OnRemoveSelected()" />
+      </div>
+      <div class="form-group mb2">
+        <label class="control-label">Selected Roles</label>
+        @Html.DropDownList("SelectedRoles", null, null, new { @class = "form-control", @multiple = "multiple" })
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div>
+  <a asp-action="Index">Back to List</a>
+</div>
+
+@section scripts {
+
+  <script type="text/javascript">
+    function OnAddSelected() {
+      var roles = $("#Roles");
+      var selroles = $("#SelectedRoles");
+      var listLength = roles[0].selectedOptions.length;
+      for (var i = listLength - 1; i >= 0; i--)
+				selroles[0].add(roles[0].selectedOptions[i]);
+    }
+
+    function OnRemoveSelected() {
+      var roles = $("#Roles");
+      var selroles = $("#SelectedRoles");
+      var listLength = selroles[0].selectedOptions.length;
+      for (var i = listLength - 1; i >= 0; i--)
+				roles[0].add(selroles[0].selectedOptions[i]);
+    }
+  </script>
+}
