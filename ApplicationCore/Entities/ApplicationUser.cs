@@ -39,5 +39,8 @@ namespace ApplicationCore.Entities
   {
     public virtual ApplicationUser User { get; set; }
     public virtual ApplicationRole Role { get; set; }
+
+    public virtual ICollection<EMS_Permission> Permissions { get; set; } = new List<EMS_Permission>();
+
   }
 }
