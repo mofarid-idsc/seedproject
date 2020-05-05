@@ -1,0 +1,12 @@
+{
+  "Permissions": [
+    {
+      "Controller": "Dashboards",
+      "Actions": "Create,View,Delete"
+    },
+    {
+      "Controller": "Employees",
+      "Actions": "Create,Index"
+    }
+  ]
+}

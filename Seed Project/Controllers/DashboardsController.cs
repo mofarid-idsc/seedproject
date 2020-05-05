@@ -16,17 +16,16 @@ namespace Seed_Project.Controllers
 
     }
     //Policy Permissions
-    [Authorize(Permissions.Dashboards.View)]
+    [Authorize("Dashboards.View")]
     public IActionResult Index()
     {
       return View();
     }
 
-    [Authorize(Permissions.Dashboards.Create)]
+    [Authorize("Dashboards.Create")]
     public IActionResult Create()
     {
       return View();
     }
-
   }
 }

@@ -5,6 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200429085929_Update PermissionsV2.cs" />
+    <Compile Remove="Migrations\20200429085929_Update PermissionsV2.Designer.cs" />
+    <Compile Remove="Migrations\20200429091303_Update PermissionsV2.cs" />
+    <Compile Remove="Migrations\20200429091303_Update PermissionsV2.Designer.cs" />
+    <Compile Remove="Migrations\20200429093458_Update PermissionsV2.cs" />
+    <Compile Remove="Migrations\20200429093458_Update PermissionsV2.Designer.cs" />
+    <Compile Remove="Migrations\20200429094911_Update PermissionsV2.cs" />
+    <Compile Remove="Migrations\20200429094911_Update PermissionsV2.Designer.cs" />
+    <Compile Remove="Migrations\20200429101317_Update PermissionsV2.cs" />
+    <Compile Remove="Migrations\20200429101317_Update PermissionsV2.Designer.cs" />
+    <Compile Remove="Migrations\20200429101805_Update PermissionsV2.cs" />
+    <Compile Remove="Migrations\20200429101805_Update PermissionsV2.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj" />
   </ItemGroup>
 

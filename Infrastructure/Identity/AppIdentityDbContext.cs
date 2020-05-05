@@ -15,7 +15,7 @@ namespace Infrastructure.Identity
         : base(options)
     {
     }
-
+    public virtual DbSet<EMS_Permission> Permissions { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
       base.OnModelCreating(builder);
@@ -23,6 +23,7 @@ namespace Infrastructure.Identity
       // For example, you can rename the ASP.NET Identity table names and more.
       // Add your customizations after calling base.OnModelCreating(builder);
 
+   
       builder.Entity<ApplicationUser>(b =>
       {
         b.Property(e=>e.Id).ValueGeneratedOnAdd();
@@ -66,6 +67,18 @@ namespace Infrastructure.Identity
             .HasForeignKey(ur => ur.RoleId)
             .IsRequired();
       });
+
+
+      builder.Entity<EMS_Permission>(table =>
+      {
+        table.HasKey(x => x.ID);
+        table.HasOne(x => x.ApplicationUserRole)
+        .WithMany(x => x.Permissions)
+        .HasForeignKey(x => x.RoleId)
+        .HasPrincipalKey(x => x.RoleId)//<<== here is core code to let foreign key userId point to User.Id.
+        .OnDelete(DeleteBehavior.Cascade);
+      });
+
 
       //builder.Entity<ApplicationUserRole>(userRole =>
       //{

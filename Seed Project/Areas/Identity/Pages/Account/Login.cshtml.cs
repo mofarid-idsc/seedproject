@@ -15,6 +15,8 @@ using ApplicationCore.Entities;
 using ApplicationCore.Helpers;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using Infrastructure.Identity;
+
 namespace Seed_Project.Areas.Identity.Pages.Account
 {
   [AllowAnonymous]
@@ -24,17 +26,19 @@ namespace Seed_Project.Areas.Identity.Pages.Account
     private readonly RoleManager<ApplicationRole> _roleManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
     private readonly ILogger<LoginModel> _logger;
+    private readonly AppIdentityDbContext _appIdentityDbContext;
 
 
     public LoginModel(SignInManager<ApplicationUser> signInManager,
         ILogger<LoginModel> logger,
         UserManager<ApplicationUser> userManager,
-    RoleManager<ApplicationRole> roleManager)
+    RoleManager<ApplicationRole> roleManager, AppIdentityDbContext appIdentityDbContext)
     {
       _roleManager = roleManager;
       _userManager = userManager;
       _signInManager = signInManager;
       _logger = logger;
+      _appIdentityDbContext = appIdentityDbContext;
     }
 
     [BindProperty]
@@ -97,13 +101,57 @@ namespace Seed_Project.Areas.Identity.Pages.Account
           //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Dashboards.View));
           //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Create));
           // Get User 
+          Guid id = new Guid("18fa9cc6-6fad-4fe0-aed0-b52c0f912365");
+
           ApplicationUser user = _userManager.Users.FirstOrDefault(x => x.UserName == Input.Username);
+       
+
+        //List<ApplicationUserRole> query = _appIdentityDbContext.UserRoles.Join(
+        //    _appIdentityDbContext.Roles,
+        //    x => x.UserId,
+        //    y => user.Id,
+        //            (x, y) => new ApplicationUserRole
+        //            {
+        //              UserId = x.UserId,
+        //              RoleId = x.RoleId
+        //            }
+        //            ).ToList();
+
+        //  var xw = _appIdentityDbContext.Permissions.Join(
+        //  query,
+        //   x => x.RoleId,
+        //   y => y.RoleId,
+        //           (x, y) => new 
+        //           {
+        //             x
+        //           }
+        //           ).ToList();
+        //  var permissions = _appIdentityDbContext.Permissions.Join(
+        //    query,
+        //    x => x.RoleId,
+        //    y => y.RoleId,
+        //            (x, y) => new 
+        //            {
+        //              Permission = x,
+        //              Role = y
+        //            }
+        //            );
+
+         
+
+
+          List<EMS_Permission> permissionss = _appIdentityDbContext.Permissions
+            .Where(x => x.OwnerID == id)
+            .ToList();
           //Get Permissions from database and insert Into Claims
-          var claims = new Claim[]
+          var claims = new List<Claim>();
+       
+          foreach (var item in permissionss)
           {
-        new Claim(CustomClaimTypes.Permission, Permissions.Dashboards.View),
-        new Claim(CustomClaimTypes.Permission, Permissions.Users.Create)
-          }; 
+           claims.Add(new Claim(CustomClaimTypes.Permission, item.ControllerName.ToString()
+                                                            + '.' + item.ActionName.ToString()));
+          }
+
           if (user != null)
             await _userManager.AddClaimsAsync(user, claims);
          

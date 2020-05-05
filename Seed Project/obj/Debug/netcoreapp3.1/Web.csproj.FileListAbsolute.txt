@@ -373,6 +373,7 @@ F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\D
 F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Manager\Index.cshtml.g.cs
+F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Permission\Index.cshtml.g.cs
 F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Role\Create.cshtml.g.cs
 F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs
 F:\IDSC\21-4-2020\seedproject\Seed Project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

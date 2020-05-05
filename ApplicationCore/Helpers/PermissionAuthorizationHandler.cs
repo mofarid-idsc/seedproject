@@ -45,6 +45,10 @@ namespace ApplicationCore.Helpers
         context.Succeed(requirement);
         return;
       }
+      else
+      {
+        context.Fail();         
+      }
 
 
 

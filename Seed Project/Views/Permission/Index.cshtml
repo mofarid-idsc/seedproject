@@ -1,0 +1,67 @@
+﻿@model  List<ApplicationCore.Entities.EMS_Permission> ;
+
+@{
+
+  ViewData["Title"] = "Index";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Permission</h1>
+
+<div class="form-group">
+    <label class="control-label"></label>
+    @Html.DropDownList("ControllersName", null, "Select Controller", new { @class = "form-control", @onChange = "SelectedValue(this)" })
+  </div>
+    <div class="form-group">
+      <form asp-action="Post" method="post">
+        <div class="card">
+          <div class="card-header">
+            <h2> Manage Permissions</h2>
+          </div>
+          <div class="card-body">
+            @if (Model != null)
+            {
+
+
+              @for (int i = 0; i < Model.Count; i++)
+              {
+            <div class="form-check m-1">
+
+              @Html.Label(@Model[i].ActionName)
+              <input type="hidden" asp-for="@Model[i].RoleId" />
+              <input type="hidden" asp-for="@Model[i].ActionName" />
+              <input type="hidden" asp-for="@Model[i].ControllerName" />
+              <input type="hidden" asp-for="@Model[i].ID" />
+              @foreach (var value in Enum.GetValues(typeof(ApplicationCore.Helpers.Enums.Permission)))
+              {
+                <input type="radio" asp-for="@Model[i].Permission" value="@value" />
+                @Html.Label(value.ToString())
+              }
+              @Html.CheckBoxFor(x => Model[i].Restricted)
+              @Html.Label("Restricted".ToString())
+            </div>
+              }
+            }
+          </div>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    @*<select asp-for="@ViewBag.Roles" class="form-control" />*@
+    
+
+<script>
+  //To get selected value an text of dropdownlist
+  function SelectedValue(ddlObject) {
+    //Selected value of dropdownlist
+    var selectedValue = ddlObject.value;
+    //Selected text of dropdownlist
+    var selectedText =  ddlObject.options[ddlObject.selectedIndex].innerHTML;
+    var url;
+    url = "/Permission/actionResult?ControllerName=" + selectedText;
+    window.location.href = url;
+  }
+
+ 
+</script>
